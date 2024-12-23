@@ -49,37 +49,6 @@ section {
     color: white;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
-}
-
-form label {
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ff007f;
-    background-color: #222;
-    color: white;
-}
-
-form button {
-    padding: 10px;
-    background-color: #ff007f;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #ff3399;
-}
-
 footer {
     background-color: #222;
     padding: 20px;
