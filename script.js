@@ -1,21 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Sayt tam yükləndikdən sonra çalışacaq
-    console.log("Kraker - Texnologiya və İdeyalar platformasına xoş gəlmisiniz!");
+// JavaScript to generate random bubbles
+document.addEventListener("DOMContentLoaded", function () {
+    const bubbleContainer = document.querySelector(".bubbles");
+    const numBubbles = 30;
 
-    // Hava kabarcıkları üçün dinamik əlavə
-    const bubbleContainer = document.createElement('div');
-    bubbleContainer.classList.add('bubbles');
-    document.body.appendChild(bubbleContainer);
-
-    // Kabarcıkları dinamik olaraq əlavə et
-    for (let i = 0; i < 20; i++) {
-        const bubble = document.createElement('span');
-        const size = Math.random() * 50 + 10; // Kabarcıq ölçüsü (10px-60px)
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-        bubble.style.left = `${Math.random() * 100}%`; // Ekran boyunca random yerləşim
-        bubble.style.animationDelay = `${Math.random() * 5}s`; // Rastgele animasiya gecikməsi
-        bubble.style.animationDuration = `${Math.random() * 5 + 5}s`; // Rastgele animasiya müddəti
+    for (let i = 0; i < numBubbles; i++) {
+        const bubble = document.createElement("span");
+        bubble.style.width = `${Math.random() * 40 + 20}px`;
+        bubble.style.height = bubble.style.width;
+        bubble.style.animationDuration = `${Math.random() * 10 + 10}s`;
+        bubble.style.animationDelay = `${Math.random() * 5}s`;
+        bubble.style.left = `${Math.random() * 100}vw`;
+        bubble.style.animationTimingFunction = "ease-in-out";
         bubbleContainer.appendChild(bubble);
     }
 });
